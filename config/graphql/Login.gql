@@ -1,0 +1,10 @@
+mutation($email: String!, $password: String!) {
+  getSessionToken(email: $email, password: $password) {
+    id
+    facebook_id
+    first_name
+    last_name
+    picture
+    token
+  }
+}

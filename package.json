@@ -1,0 +1,21 @@
+{
+  "name": "aida",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "dependencies": {
+    "bootstrap": "4.0.0-beta",
+    "cross-env": "^5.0.1",
+    "font-awesome": "^4.7.0",
+    "imagemin-webpack-plugin": "^1.4.4",
+    "jquery": "^3.1.1",
+    "jquery-validation": "^1.17.0",
+    "laravel-mix": "^1.6.1",
+    "popper.js": "^1.11.0"
+  }
+}

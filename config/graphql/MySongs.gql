@@ -1,0 +1,15 @@
+query {
+  Viewer {
+    first_name
+    last_name
+    songs {
+      id
+      title
+      picture
+      user {
+        id
+        first_name
+      }
+    }
+  }
+}

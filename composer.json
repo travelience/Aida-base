@@ -1,0 +1,21 @@
+{
+  "name": "travelience/aida-base",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Rodrigo Ramirez",
+      "email": "xpromx@gmaill.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/travelience/Aida"
+    }
+  ],
+  "require": {
+    "travelience/aida": "dev-master"
+  }
+}

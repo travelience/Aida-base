@@ -1,0 +1,17 @@
+.form-control {
+  &.error {
+    border: 1px $red solid;
+  }
+}
+
+.invalid-feedback {
+  display: block;
+}
+
+label {
+  &.error {
+    margin-top: .25rem;
+    font-size: .875rem;
+    color: $red;
+  }
+}

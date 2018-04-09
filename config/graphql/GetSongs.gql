@@ -1,0 +1,14 @@
+query songs($limit: Int!) {
+  songs(limit: $limit) {
+    nodes
+    {
+      id,
+      title,
+      picture,
+      user{
+        id,
+        first_name
+      }
+    }
+  }
+}
