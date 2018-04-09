@@ -8,12 +8,10 @@ if( $app->auth->check() )
     $headers['Authorization'] = $app->auth->user()->token;
 }
 
-$graphql = graphql('http://music-api.travelience.com/graphql', $headers);
-$app->set('graphql', $graphql);
+$app->withGraphQL('http://music-api.travelience.com/graphql', $headers);
 
 // Api
-$api = api('https://triplelights.com/api/');
-$app->set('api', $api);
+$app->withApi('https://triplelights.com/api/');
 
 // Facebook
-$app->set('facebook', facebook());
+$app->withFacebook();
