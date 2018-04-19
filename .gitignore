@@ -16,3 +16,4 @@ public/mix-manifest.json
 composer.lock
 package-lock.json
 errors.log
+./vagrant
