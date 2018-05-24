@@ -26,6 +26,14 @@
 <h1>{{ __('home') }} {{ Carbon::now()->toDayDateTimeString() }} </h1>
 <hr />
 
+REQ: {{ $req->get('type') }}
+
+<hr />
+
+REQ: {{ get_type() }}
+
+<hr />
+
 @if( $songs )
   <ul>
     @foreach( $songs->nodes as $item )

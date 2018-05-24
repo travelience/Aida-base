@@ -1,6 +1,6 @@
 <?php
 
-    $res->seo->set('title', 'Contact Page');
+    $res->seo->set('title', 'Contact2 Page');
         
     if( $req->onSubmit() )
     {

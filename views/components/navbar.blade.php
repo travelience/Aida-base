@@ -1,4 +1,27 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="flex items-center justify-between flex-wrap bg-grey-lighter p-6">
+    <div class="flex items-center flex-no-shrink mr-6">
+        <span class="font-semibold text-xl tracking-tight">Aida</span>
+    </div>
+
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div class="text-sm lg:flex-grow">
+
+            <a href="{{ route('home') }}" class="block mt-4 lg:inline-block lg:mt-0 text-blue  mr-4">
+                {{ __('home') }}
+            </a>
+
+            <a href="{{ route('contact') }}" class="block mt-4 lg:inline-block lg:mt-0 text-blue  mr-4">
+                {{ __('contact') }}
+            </a>
+
+            <a href="{{ route('private') }}" class="block mt-4 lg:inline-block lg:mt-0 text-blue  mr-4">
+                {{ __('private') }}
+            </a>
+
+        </div>
+    </div>
+</div>
+{{-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="{{ route('home') }}">Aida</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -17,6 +40,10 @@
 
           <li class="nav-item {{ is_route('private') ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('private') }}">{{ __('private') }}</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('picture') }}">Picture</a>
           </li>
     
         </ul>
@@ -61,4 +88,4 @@
         </ul>
     
     </div>
-</nav>
+</nav> --}}

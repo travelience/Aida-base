@@ -1,5 +1,5 @@
 <?php
-    $songs = $graphql->response('GetSongs', ['limit' => 5]);
+    // $songs = $graphql->response('GetSongs', ['limit' => 5]);
 ?>
 @extends('layouts.default')
 
@@ -7,12 +7,12 @@
 
 <h1>POST: {{ $req->params['id'] }}</h1>
 <hr />
-  @if( $songs )
+  {{-- @if( $songs )
   <ul>
     @foreach( $songs->songs->nodes as $item )
       <li> {{ $item->title }} </li>
     @endforeach
   </ul>
-  @endif
+  @endif --}}
 
 @endsection

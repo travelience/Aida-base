@@ -1,5 +1,8 @@
 const mix = require('laravel-mix')
 const ImageminPlugin = require('imagemin-webpack-plugin').default
+const tailwindcss = require('tailwindcss')
+const path = require('path')
+require('laravel-mix-purgecss')
 
 mix.webpackConfig({
   plugins: [
@@ -20,5 +23,25 @@ mix.version()
 
 // options
 mix.options({
-  processCssUrls: true
+  processCssUrls: false,
+  postCss: [
+    tailwindcss('./tailwind.js')
+  ]
 })
+
+if (mix.inProduction()) {
+  mix.purgeCss({
+    enabled: true,
+    globs: [
+      path.join(__dirname, 'views/**/*.blade.php'),
+      path.join(__dirname, 'assets/js/**/*.vue'),
+      path.join(__dirname, 'assets/js/**/*.js')
+    ],
+    extensions: [
+      'html',
+      'js',
+      'php',
+      'vue'
+    ]
+  })
+}
