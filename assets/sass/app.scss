@@ -4,20 +4,9 @@
 // Packages
 @import "node_modules/font-awesome/scss/font-awesome.scss";
 
-// Variables
-@import "variables";
+@tailwind preflight;
 
-// Bootstrap
-@import "node_modules/bootstrap/scss/bootstrap";
-
-// Components
 @import "components";
-
-// Mixins
-@import "mixins";
-
-// Layout
-@import "layout";
-
-// Utilities
 @import "utilities";
+
+@tailwind utilities;

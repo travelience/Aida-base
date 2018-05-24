@@ -1,17 +1,11 @@
-.form-control {
-  &.error {
-    border: 1px $red solid;
-  }
+.container {
+  @apply .m-4;
 }
 
-.invalid-feedback {
-  display: block;
+.error {
+  @apply .border-red .text-red;
 }
 
-label {
-  &.error {
-    margin-top: .25rem;
-    font-size: .875rem;
-    color: $red;
-  }
+label.error {
+  @apply .my-2 .block;
 }

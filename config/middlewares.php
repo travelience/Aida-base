@@ -10,6 +10,10 @@ $app->router->middleware('auth', function($req, $res){
 
 });
 
+// $app->use( function($req, $res){
+//     dd('hola');
+// });
+
 $app->on('error', function($req, $res){
     echo "HAS ERROR";
 });
