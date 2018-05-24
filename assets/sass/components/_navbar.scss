@@ -1,0 +1,19 @@
+.navbar {
+  @apply .flex .items-center .justify-between .flex-wrap .bg-grey-lighter .p-6;
+}
+
+.navbar-logo {
+  @apply .flex .items-center .flex-no-shrink .mr-6;
+}
+
+.navbar-menu {
+  @apply .w-full .block .flex-grow;
+}
+
+.navbar-item {
+  @apply .block .mt-4 .text-blue .mr-4;
+}
+
+.navbar-item-active {
+  @apply .no-underline .text-black;
+}

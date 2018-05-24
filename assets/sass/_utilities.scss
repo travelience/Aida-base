@@ -1,0 +1,11 @@
+.container {
+  @apply .m-4;
+}
+
+.error {
+  @apply .border-red .text-red;
+}
+
+label.error {
+  @apply .my-2 .block;
+}

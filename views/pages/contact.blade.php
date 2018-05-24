@@ -27,30 +27,30 @@
 
 @section('content')
 
-    <h1>Contact</h1>
-    <hr />
+    <h1 class="border-b border-grey-ligther pb-2 mb-4">{{ __('contact') }} </h1>
 
-    <div class="w-50">
+
+    <div class="w-full lg:w-1/2">
         <form method="post" class="validate">
 
-            <div class="form-group">
-                <label>Name</label>
-                <input name="name" type="text" class="form-control {{ $req->hasError('name', 'error') }}" value="{{ $req->old('name') }}" required placeholder="Enter name">
-                @if( $error = $req->getError('name') ) <div class="invalid-feedback"> {{ $error }} </div> @endif
+            <div class="mb-4">
+                <label class="mb-2 block">Name</label>
+                <input name="name" type="text" class="w-full border rounded py-2 px-3 text-grey-darker appearance-none {{ $req->hasError('name', 'error') }}" value="{{ $req->old('name') }}" required placeholder="Enter name">
+                @if( $error = $req->getError('name') ) <label class="error"> {{ $error }} </label> @endif
             </div>
 
-            <div class="form-group">
-                <label>Email address</label>
-                <input name="email" type="email" class="form-control {{ $req->hasError('email', 'error') }}" value="{{ $req->old('email') }}" required placeholder="Enter email">
-                @if( $error = $req->getError('email') ) <div class="invalid-feedback"> {{ $error }} </div> @endif
+            <div class="mb-4">
+                <label class="mb-2 block">Email address</label>
+                <input name="email" type="email" class="w-full border rounded py-2 px-3 text-grey-darker appearance-none {{ $req->hasError('email', 'error') }}" value="{{ $req->old('email') }}" required placeholder="Enter email">
+                @if( $error = $req->getError('email') ) <label class="error"> {{ $error }} </label> @endif
             </div>
 
-            <div class="form-group">
-                <label>Message</label>
-                <textarea name="message" class="form-control" placeholder="Enter the message" required rows="5">{{ $req->old('message') }}</textarea>
+            <div class="mb-4">
+                <label class="mb-2 block">Message</label>
+                <textarea name="message" class="w-full border rounded py-2 px-2 text-grey-darker appearance-none" placeholder="Enter the message" required rows="5">{{ $req->old('message') }}</textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="bg-blue hover:bg-blue-dark text-white font-bold py-3 px-6 rounded">Submit</button>
         </form>
     </div>
 

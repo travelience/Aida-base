@@ -12,7 +12,7 @@
 
       @include('components.navbar')
 
-      <main class="container-fluid mt-4">
+      <main class="container">
         @include('Aida::alerts')
         @yield('content')
       </main>

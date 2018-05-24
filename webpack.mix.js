@@ -44,4 +44,12 @@ if (mix.inProduction()) {
       'vue'
     ]
   })
+}else {
+  mix.browserSync({
+    proxy: 'aida-base.test',
+    files: [
+      'views/**/*.blade.php',
+      'public/css/app.css'
+    ]
+  })
 }

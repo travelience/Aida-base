@@ -1,91 +1,44 @@
-<div class="flex items-center justify-between flex-wrap bg-grey-lighter p-6">
-    <div class="flex items-center flex-no-shrink mr-6">
-        <span class="font-semibold text-xl tracking-tight">Aida</span>
+<div class="navbar">
+    <div class="navbar-logo">
+        <span class="text-xl tracking-tight">Aida</span>
     </div>
 
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div class="navbar-menu lg:flex lg:items-center lg:w-auto">
         <div class="text-sm lg:flex-grow">
 
-            <a href="{{ route('home') }}" class="block mt-4 lg:inline-block lg:mt-0 text-blue  mr-4">
+            <a href="{{ route('home') }}" class="navbar-item lg:inline-block lg:mt-0 {{ is_route('home') ? 'navbar-item-active' : '' }}">
                 {{ __('home') }}
             </a>
 
-            <a href="{{ route('contact') }}" class="block mt-4 lg:inline-block lg:mt-0 text-blue  mr-4">
+            <a href="{{ route('contact') }}" class="navbar-item lg:inline-block lg:mt-0 {{ is_route('contact') ? 'navbar-item-active' : '' }}">
                 {{ __('contact') }}
             </a>
 
-            <a href="{{ route('private') }}" class="block mt-4 lg:inline-block lg:mt-0 text-blue  mr-4">
+            <a href="{{ route('private') }}" class="navbar-item lg:inline-block lg:mt-0 {{ is_route('private') ? 'navbar-item-active' : '' }}">
                 {{ __('private') }}
             </a>
 
         </div>
-    </div>
-</div>
-{{-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="{{ route('home') }}">Aida</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-       
-        <ul class="navbar-nav">
-          
-          <li class="nav-item {{ is_route('home') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('home') }}">{{ __('home') }} </a>
-          </li>
-    
-          <li class="nav-item {{ is_route('contact') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('contact') }}">{{ __('contact') }}</a>
-          </li>
 
-          <li class="nav-item {{ is_route('private') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('private') }}">{{ __('private') }}</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('picture') }}">Picture</a>
-          </li>
-    
-        </ul>
-
-        <ul class="navbar-nav ml-auto">
-
-            @if( $res->locales() )
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
-                    Languages
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    @foreach( $res->locales() as $locale )
-                    <a class="dropdown-item" href="{{ localization_url( $locale ) }}">{{ $locale }}</a>
-                    @endforeach
-                </div>
-            </li>
-            @endif
-
+        <div>
             @if( auth()->check() )
 
-                <li class="nav-item">
-                <a class="nav-link" href="{{ route('logout') }}">{{ __('logout') }}</a>
-                </li>
+                <a href="{{ route('logout') }}" class="navbar-item lg:inline-block lg:mt-0">
+                    {{ __('logout') }}
+                </a>
 
-                <li class="nav-item">
-                <a class="nav-link" href="#">{{ auth()->user()->first_name }}</a>
-                </li>
-
+                <a href="#" class="bnavbar-item">
+                    {{ auth()->user()->first_name }}
+                </a>
             @else
+                <a href="{{ route('login') }}" class="navbar-item lg:inline-block lg:mt-0 {{ is_route('login') ? 'navbar-item-active' : '' }}">
+                    {{ __('login') }}
+                </a>
 
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ route('login') }}">{{ __('login') }}</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ $res->facebook->login() }}">Facebook</a>
-                </li>
-
+                <a href="{{ $res->facebook->login() }}" class="navbar-item lg:inline-block lg:mt-0">
+                    Facebook
+                </a>     
             @endif
-
-        </ul>
-    
+        </div>
     </div>
-</nav> --}}
+</div>

@@ -1,43 +1,20 @@
 <?php
-
    use Carbon\Carbon;
 
     $songs = cache('songs', function($req, $res){
         return dispatch('GET_SONGS', ['limit' => 15])->songs;
     });
-
-    // $coupons = $res->db->table('coupons')->orderBY('id','DESC')->get();
-
-    // $res->db->table('coupons')->insert([
-    //   'name' => 'TEST',
-    //   'value' => 10,
-    //   'organization_id' => 0,
-    //   'bookings' => 0,
-    //   'limit' => 0,
-    //   'created_at' => date('Y-m-d H:i:s'),
-    //   'updated_at' => date('Y-m-d H:i:s')
-    // ]);
-
 ?>
 @extends('layouts.default')
 
 @section('content')
 
-<h1>{{ __('home') }} {{ Carbon::now()->toDayDateTimeString() }} </h1>
-<hr />
-
-REQ: {{ $req->get('type') }}
-
-<hr />
-
-REQ: {{ get_type() }}
-
-<hr />
+<h1 class="border-b border-grey-ligther pb-2 mb-4">{{ __('home') }} {{ Carbon::now()->toDayDateTimeString() }} </h1>
 
 @if( $songs )
   <ul>
     @foreach( $songs->nodes as $item )
-      <li> {{ $item->title }} </li>
+      <li class="border-b border-grey-lighter py-2"> {{ $item->title }} </li>
     @endforeach
   </ul>
 @endif
