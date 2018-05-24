@@ -9,7 +9,7 @@
             $res->auth->authenticate( $r->getSessionToken );
             $res->redirect('home');
         }
-
+        
         $req->setErrors( $r->errors() );
 
         if( $r->hasError('default') )
